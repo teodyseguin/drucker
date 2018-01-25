@@ -1,0 +1,7 @@
+# Ignore configuration files that may contain sensitive information.
+drupal/sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+drupal/sites/*/files
+drupal/sites/*/private
+

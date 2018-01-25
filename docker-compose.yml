@@ -1,0 +1,17 @@
+version: '2'
+services:
+  database:
+    build: ./database
+    container_name: database
+    environment:
+      MYSQL_DATABASE: drupal
+      MYSQL_ROOT_PASSWORD: drupal
+
+  drupal:
+    build: ./drupal
+    container_name: drupal
+    volumes:
+      - ./drupal:/var/www/html
+    ports:
+      - 8000:80
+
